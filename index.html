@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<link rel="stylesheet" href="jquery.slider.css">
+	<script src="jquery.js" ></script>
+	<script src="jquery.slider.js" ></script>
+</head>
+<body>
+		<a id="dialogBtn">显示/隐藏</a>
+		<div id="dialog" style="width:300px;height:400px;display: none;    position: relative;">
+			<ul class="rslides"  id="picSlider" >
+				<li><img src="menu01.png"></li>
+				<li><img src="menu02.png"></li>
+				<li><img src="menu03.png"></li>
+				<li><img src="menu04.png"></li>
+			</ul>
+		</div>
+
+		<script >
+		jQuery(document).ready(function($) {
+
+			$("#dialogBtn").click(function(event) {
+				$("#dialog").toggle();
+			});
+			 $("#picSlider").responsiveSlides({
+			        auto: false,
+			        pager: false,
+			        prevText:'&lt;',
+			        nextText:'&gt;',
+			        nav: true,
+			        speed: 500,
+			        namespace: "slider",
+			});
+		});
+
+
+		</script>
+</body>
+</html>
